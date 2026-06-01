@@ -12,6 +12,17 @@
 ## AI
 - Google Gemini API
 
+## Report Types (Version 1)
+
+- Chest X-Ray Reports
+- Bone X-Ray Reports
+
+## Future Expansion
+
+- CT Reports
+- MRI Reports
+- Ultrasound Reports
+
 ## PDF Processing
 - PyMuPDF
 
@@ -21,4 +32,4 @@
 
 ## Version 1 Goal
 
-Upload PDF radiology report and generate patient-friendly explanations using AI.
+Upload Chest or Bone X-Ray report PDFs and generate patient-friendly explanations, medical glossaries, and doctor discussion questions using AI.
