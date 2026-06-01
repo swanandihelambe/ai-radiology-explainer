@@ -2,10 +2,12 @@
 
 ## Phase 1 - Research
 
-* Understand radiology workflows
-* Study radiology report structure
+* Understand X-Ray reporting workflows
+* Study Chest X-Ray report structure
+* Study Bone X-Ray report structure
 * Research patient health literacy challenges
-* Explore existing radiology AI solutions
+* Explore existing radiology and healthcare AI solutions
+* Collect sample Chest and Bone X-Ray reports for testing
 
 ## Phase 2 - Architecture
 
@@ -18,14 +20,17 @@
 
 * PDF upload
 * Text extraction
+* Chest vs Bone report classification
+* Medical finding extraction
 * AI explanation generation
 * Medical glossary generation
 
 ## Phase 4 - Advanced Features
 
-* Medical entity extraction
 * Doctor discussion questions
 * Report history
+* Error handling and validation
+* Medical disclaimer integration
 
 ## Phase 5 - Deployment
 
@@ -35,6 +40,9 @@
 
 ## Phase 6 - Future Scope
 
+* CT Report Support
+* MRI Report Support
+* Ultrasound Report Support
 * Organ visualization
 * Multilingual support
 * Voice explanations
