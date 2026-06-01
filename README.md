@@ -1,17 +1,30 @@
-# AI-Assisted Radiology Explainer
+# AI-Assisted X-Ray Report Explainer
 
-AI-Assisted Radiology Explainer is a healthcare AI project that aims to make radiology reports easier for patients to understand.
+AI-Assisted X-Ray Report Explainer is a healthcare AI project that aims to make Chest and Bone X-Ray reports easier for patients to understand.
 
-Radiology reports are often written using complex medical terminology, making it difficult for non-medical users to interpret their findings. This project focuses on simplifying report content into patient-friendly explanations while preserving the original meaning.
+X-Ray reports are often written using complex medical terminology, making it difficult for non-medical users to interpret their findings. This project focuses on simplifying report content into patient-friendly explanations while preserving the original meaning.
 
 ## Planned Features
 
-* PDF radiology report upload
+* PDF X-Ray report upload (Chest and Bone)
 * Medical finding extraction
 * Simplified AI-generated explanations
 * Medical term glossary
 * Doctor discussion questions
 * Report history tracking
+
+## Version 1 Scope
+
+Supported Report Types:
+
+* Chest X-Ray Reports
+* Bone X-Ray Reports
+
+Future Expansion:
+
+* CT Reports
+* MRI Reports
+* Ultrasound Reports
 
 ## Tech Stack
 
