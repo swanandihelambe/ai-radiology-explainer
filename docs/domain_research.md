@@ -79,26 +79,64 @@ Accumulation of excess fluid in the pleural space (the area between the lungs an
 ### Pneumonia
 
 **Meaning:**
-(To be researched)
+An infection that causes inflammation of the air sacs in one or both lungs.
 
-**Symptoms:**
-(To be researched)
+**Common Symptoms:**
+
+* Cough
+* Fever
+* Chest pain
+* Shortness of breath
 
 **Common Causes:**
-(To be researched)
+
+* Bacterial infection
+* Viral infection
+* Fungal infection
+
+**Example Report Phrase:**
+"Right lower lobe consolidation consistent with pneumonia."
+
+**Patient-Friendly Explanation:**
+"The report suggests an infection in the lung that may be causing inflammation. Your doctor will consider your symptoms and other tests when determining the appropriate treatment."
+
+**Project Notes:**
+
+* Pneumonia may appear as consolidation on a Chest X-Ray.
+* The AI should explain the finding without recommending medications.
+* The explanation should remain educational.
 
 ---
 
 ### Pneumothorax
 
 **Meaning:**
-(To be researched)
+A condition where air collects between the lung and chest wall, causing partial or complete lung collapse.
 
-**Symptoms:**
-(To be researched)
+**Common Symptoms:**
+
+* Sudden chest pain
+* Shortness of breath
+* Rapid breathing
 
 **Common Causes:**
-(To be researched)
+
+* Chest injury
+* Lung disease
+* Medical procedures
+* Spontaneous occurrence
+
+**Example Report Phrase:**
+"Small right-sided pneumothorax identified."
+
+**Patient-Friendly Explanation:**
+"The report indicates the presence of air outside the lung, which may cause the lung to partially collapse. This finding should be reviewed by a healthcare professional."
+
+**Project Notes:**
+
+* Pneumothorax is an important radiological finding.
+* The AI should avoid discussing severity unless explicitly stated in the report.
+* The explanation should encourage medical follow-up.
 
 ---
 
@@ -173,26 +211,65 @@ A degenerative joint condition caused by gradual wear and tear of joint cartilag
 ### Dislocation
 
 **Meaning:**
-(To be researched)
+A condition in which the bones of a joint are forced out of their normal position.
 
-**Symptoms:**
-(To be researched)
+**Common Symptoms:**
+
+* Severe pain
+* Swelling
+* Visible deformity
+* Limited movement
 
 **Common Causes:**
-(To be researched)
+
+* Falls
+* Sports injuries
+* Trauma
+* Accidents
+
+**Example Report Phrase:**
+"Anterior shoulder dislocation noted."
+
+**Patient-Friendly Explanation:**
+"The report indicates that a bone within the joint has moved out of its normal position. The affected joint and severity should be discussed with your healthcare provider."
+
+**Project Notes:**
+
+* Commonly seen in Bone X-Ray reports.
+* The AI should explain which joint is involved if mentioned.
+* The system should avoid suggesting treatment methods.
 
 ---
 
 ### Joint Space Narrowing
 
 **Meaning:**
-(To be researched)
+A reduction in the space between the bones of a joint, often indicating cartilage loss.
 
-**Symptoms:**
-(To be researched)
+**Common Symptoms:**
+
+* Joint pain
+* Stiffness
+* Reduced flexibility
+* Difficulty with movement
 
 **Common Causes:**
-(To be researched)
+
+* Osteoarthritis
+* Joint degeneration
+* Previous joint injuries
+
+**Example Report Phrase:**
+"Medial compartment joint space narrowing observed."
+
+**Patient-Friendly Explanation:**
+"The report suggests that the space within the joint is smaller than usual. This finding is often associated with wear-and-tear changes in the joint."
+
+**Project Notes:**
+
+* Frequently associated with osteoarthritis.
+* Severity may be described as mild, moderate, or severe.
+* The AI should explain the finding without recommending treatment.
 
 ---
 
@@ -201,32 +278,32 @@ A degenerative joint condition caused by gradual wear and tear of joint cartilag
 ### Finding
 
 **Meaning:**
-(To be researched)
+An observation or abnormality identified in a medical image or report.
 
 ### Impression
 
 **Meaning:**
-(To be researched)
+The radiologist's summary of the most important findings and overall interpretation.
 
 ### Degenerative Changes
 
 **Meaning:**
-(To be researched)
+Gradual wear-and-tear changes affecting bones, joints, or tissues over time.
 
 ### Mild
 
 **Meaning:**
-(To be researched)
+A small or early-stage abnormality with limited severity.
 
 ### Moderate
 
 **Meaning:**
-(To be researched)
+An abnormality of intermediate severity.
 
 ### Severe
 
 **Meaning:**
-(To be researched)
+A significant abnormality that may require prompt medical attention.
 
 ---
 
@@ -236,8 +313,12 @@ A degenerative joint condition caused by gradual wear and tear of joint cartilag
 
 * Cardiomegaly
 * Pleural Effusion
+* Pneumonia
+* Pneumothorax
 
 ## Bone X-Ray
 
 * Fracture
 * Osteoarthritis
+* Dislocation
+* Joint Space Narrowing
