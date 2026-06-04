@@ -35,6 +35,31 @@ Future Expansion:
 * Google Gemini API
 * AWS
 
+## Current Progress
+
+### Completed
+
+* Project planning
+* Problem statement definition
+* System architecture design
+* Initial Chest X-Ray domain research
+* Initial Bone X-Ray domain research
+
+### In Progress
+
+* Sample report collection
+* Medical terminology mapping
+* Prompt design for AI explanations
+
+### Upcoming
+
+* PDF text extraction
+* Report type classification
+* AI explanation generation
+* Medical glossary generation
+* Doctor discussion questions
+
+
 ## Project Status
 
 Currently in the research and planning phase.
