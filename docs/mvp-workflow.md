@@ -2,13 +2,15 @@
 
 ## Objective
 
-The AI-Assisted X-Ray Report Explainer helps patients understand Chest and Bone X-Ray reports by converting complex medical terminology into simple explanations while preserving the original meaning of the report.
+The AI-Assisted Radiology Explainer helps patients understand Chest and Bone X-Ray studies by combining radiology report interpretation with X-Ray image context.
+
+The system converts complex medical terminology into simple explanations while preserving the original meaning of the report. It is designed to improve patient understanding, health literacy, and doctor-patient communication after imaging studies.
 
 ---
 
-## Supported Reports (Version 1)
+## Supported Studies (Version 1)
 
-### Chest X-Ray Reports
+### Chest X-Ray
 
 Supported Findings:
 
@@ -17,7 +19,7 @@ Supported Findings:
 * Pneumonia
 * Pneumothorax
 
-### Bone X-Ray Reports
+### Bone X-Ray
 
 Supported Findings:
 
@@ -30,18 +32,22 @@ Supported Findings:
 
 ## Workflow
 
-### Step 1: Upload Report
+### Step 1: Upload Study
 
-User uploads an X-Ray report PDF.
+User uploads:
+
+* X-Ray Image
+* Radiology Report PDF
 
 Input:
 
-* Chest X-Ray Report PDF
-* Bone X-Ray Report PDF
+* Chest X-Ray Image + Report
+  or
+* Bone X-Ray Image + Report
 
 Output:
 
-* PDF received by system
+* Study received by system
 
 ---
 
@@ -63,9 +69,9 @@ Mild enlargement of the cardiac silhouette.
 
 ---
 
-### Step 3: Identify Report Type
+### Step 3: Identify Study Type
 
-The system determines whether the uploaded report belongs to:
+The system determines whether the uploaded study belongs to:
 
 * Chest X-Ray
   or
@@ -73,7 +79,7 @@ The system determines whether the uploaded report belongs to:
 
 Output:
 
-* Report category
+* Study category
 
 ---
 
@@ -83,14 +89,14 @@ The system identifies important findings present in the report.
 
 Examples:
 
-Chest:
+#### Chest Findings
 
 * Cardiomegaly
 * Pleural Effusion
 * Pneumonia
 * Pneumothorax
 
-Bone:
+#### Bone Findings
 
 * Fracture
 * Osteoarthritis
@@ -103,9 +109,28 @@ Output:
 
 ---
 
-### Step 5: Generate Patient-Friendly Explanation
+### Step 5: Analyze Image Context
 
-Google Gemini converts medical terminology into simple language.
+Google Gemini Vision analyzes the uploaded X-Ray image together with the extracted report findings.
+
+Example:
+
+Report Finding:
+Right middle lobe consolidation
+
+Image Context:
+The corresponding region of the right lung may be highlighted and explained to the user.
+
+Output:
+
+* Image context information
+* Finding-to-image correlation
+
+---
+
+### Step 6: Generate Patient-Friendly Explanation
+
+Google Gemini Vision converts medical terminology into simple language.
 
 Example:
 
@@ -121,9 +146,9 @@ Output:
 
 ---
 
-### Step 6: Generate Medical Glossary
+### Step 7: Generate Medical Glossary
 
-The system identifies difficult medical terms and generates definitions.
+The system identifies difficult medical terms and generates patient-friendly definitions.
 
 Example:
 
@@ -139,7 +164,7 @@ Output:
 
 ---
 
-### Step 7: Generate Doctor Discussion Questions
+### Step 8: Generate Doctor Discussion Questions
 
 The system generates useful questions patients may ask their doctor.
 
@@ -148,6 +173,7 @@ Examples:
 * What does this finding mean in my case?
 * Do I need additional tests?
 * Should this finding be monitored?
+* Does this finding require follow-up imaging?
 
 Output:
 
@@ -155,15 +181,17 @@ Output:
 
 ---
 
-### Step 8: Save Analysis
+### Step 9: Save Analysis
 
 The system stores:
 
+* X-Ray image
 * Report text
 * Findings
 * Explanation
 * Glossary
 * Questions
+* Image context
 
 Output:
 
@@ -175,24 +203,41 @@ Output:
 
 Version 1 will NOT:
 
-* Diagnose diseases
+* Perform independent medical diagnosis from X-Ray images
 * Recommend treatments
-* Interpret X-Ray images
+* Prescribe medications
 * Support CT reports
 * Support MRI reports
 * Replace healthcare professionals
 
 ---
 
+## Why Not Just ChatGPT?
+
+The system is specifically designed for radiology education and patient understanding.
+
+It combines:
+
+* X-Ray image understanding
+* Radiology report interpretation
+* Medical glossary generation
+* Doctor discussion questions
+* Image-to-report correlation
+* Patient-friendly explanations
+
+into a structured workflow focused on helping patients better understand their imaging studies.
+
+---
+
 ## Success Criteria
 
-The MVP will be considered successful if a user can:
+The MVP will be considered successful if:
 
-1. Upload a Chest or Bone X-Ray report.
-2. Extract report text.
-3. Identify important findings.
-4. Generate patient-friendly explanations.
-5. Generate glossary terms.
-6. Generate doctor discussion questions.
-7. View previously analyzed reports.
-
+1. A user can upload a Chest or Bone X-Ray image and report.
+2. The system can extract report text from the uploaded PDF.
+3. The system can automatically identify important findings.
+4. The system can generate patient-friendly explanations.
+5. The system can generate medical glossary definitions.
+6. The system can generate doctor discussion questions.
+7. The system can provide image context related to report findings.
+8. The user can view previously analyzed studies.
