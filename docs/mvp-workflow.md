@@ -34,20 +34,17 @@ Supported Findings:
 
 ### Step 1: Upload Study
 
-User uploads:
+Required Input:
 
-* X-Ray Image
 * Radiology Report PDF
 
-Input:
+Optional Input:
 
-* Chest X-Ray Image + Report
-  or
-* Bone X-Ray Image + Report
+* X-Ray Image
 
 Output:
 
-* Study received by system
+* Files received by the system
 
 ---
 
@@ -69,17 +66,21 @@ Mild enlargement of the cardiac silhouette.
 
 ---
 
-### Step 3: Identify Study Type
+### Step 3: Classify Report Type
 
-The system determines whether the uploaded study belongs to:
+The system determines whether the uploaded report belongs to:
 
-* Chest X-Ray
-  or
-* Bone X-Ray
+* Chest X-Ray Report
+* Bone X-Ray Report
+* Other Medical Report
 
 Output:
 
-* Study category
+* Report category
+
+Note:
+
+Unsupported report types are not processed further by the MVP.
 
 ---
 
@@ -109,36 +110,9 @@ Output:
 
 ---
 
-### Step 5: Analyze Image Context
+### Step 5: Generate Patient-Friendly Explanation
 
-Google Gemini Vision analyzes the uploaded X-Ray image together with the extracted report findings.
-
-Example:
-
-Report Finding:
-Right middle lobe consolidation
-
-Image Context:
-The corresponding region of the right lung may be highlighted and explained to the user.
-
-Output:
-
-* Image context information
-* Finding-to-image correlation
-
----
-
-### Step 6: Generate Patient-Friendly Explanation
-
-Google Gemini Vision converts medical terminology into simple language.
-
-Example:
-
-Finding:
-Cardiomegaly
-
-Explanation:
-The report suggests that the heart appears larger than normal. This finding should be discussed with your healthcare provider for proper interpretation.
+Google Gemini converts medical terminology into simple language.
 
 Output:
 
@@ -146,42 +120,19 @@ Output:
 
 ---
 
-### Step 7: Generate Medical Glossary
+### Step 6: Generate Medical Glossary (Future)
 
-The system identifies difficult medical terms and generates patient-friendly definitions.
-
-Example:
-
-Cardiomegaly:
-Enlargement of the heart.
-
-Pleural Effusion:
-Fluid buildup around the lungs.
-
-Output:
-
-* Medical glossary
+Planned for a future MVP iteration.
 
 ---
 
-### Step 8: Generate Doctor Discussion Questions
+### Step 7: Generate Doctor Discussion Questions (Future)
 
-The system generates useful questions patients may ask their doctor.
-
-Examples:
-
-* What does this finding mean in my case?
-* Do I need additional tests?
-* Should this finding be monitored?
-* Does this finding require follow-up imaging?
-
-Output:
-
-* Suggested doctor discussion questions
+Planned for a future MVP iteration.
 
 ---
 
-### Step 9: Save Analysis
+### Step 8: Save Analysis
 
 The system stores:
 
@@ -233,11 +184,9 @@ into a structured workflow focused on helping patients better understand their i
 
 The MVP will be considered successful if:
 
-1. A user can upload a Chest or Bone X-Ray image and report.
-2. The system can extract report text from the uploaded PDF.
-3. The system can automatically identify important findings.
-4. The system can generate patient-friendly explanations.
-5. The system can generate medical glossary definitions.
-6. The system can generate doctor discussion questions.
-7. The system can provide image context related to report findings.
-8. The user can view previously analyzed studies.
+1. A user can upload a Chest or Bone X-Ray report.
+2. A user can optionally upload an X-Ray image.
+3. The system can extract report text from the uploaded PDF.
+4. The system can classify the report type.
+5. The system can generate patient-friendly explanations.
+6. The system can reject unsupported report types.
