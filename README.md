@@ -6,8 +6,9 @@ Radiology reports often contain complex medical terminology that can be difficul
 
 ## Planned Features
 
-* X-Ray image upload
-* PDF X-Ray report upload (Chest and Bone)
+* Radiology report PDF upload
+* Optional X-Ray image upload
+* Report type classification
 * Medical finding extraction
 * Simplified AI-generated explanations
 * Medical term glossary
@@ -19,16 +20,18 @@ Radiology reports often contain complex medical terminology that can be difficul
 
 ## Version 1 Scope
 
+Required Input:
+
+* Radiology Report PDF
+
+Optional Input:
+
+* X-Ray Image
+
 Supported Report Types:
 
 * Chest X-Ray Reports
 * Bone X-Ray Reports
-
-Future Expansion:
-
-* CT Reports
-* MRI Reports
-* Ultrasound Reports
 
 ## Tech Stack
 
@@ -80,7 +83,21 @@ into a structured workflow focused on helping patients better understand their i
 
 ## Project Status
 
-Currently in the research and planning phase.
+Currently in MVP development.
+
+Implemented Features:
+
+* PDF report upload
+* Optional X-Ray image upload
+* PDF text extraction
+* Report type classification
+* AI-generated patient-friendly explanations
+
+In Progress:
+
+* Medical glossary generation
+* Doctor discussion questions
+* Image-to-report contextual analysis
 
 ## Disclaimer
 
