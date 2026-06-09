@@ -8,11 +8,13 @@
 
   * Cardiomegaly
   * Pleural Effusion
+
 * Researched Bone X-Ray findings:
 
   * Fracture
   * Osteoarthritis
-* Updated domain research documentation
+
+* Updated domain research documentation.
 
 ### Notes
 
@@ -21,7 +23,7 @@
 
 ---
 
-## June 3-6, 2026
+## June 3–6, 2026
 
 ### Completed
 
@@ -31,7 +33,9 @@
   * Pneumothorax
   * Dislocation
   * Joint Space Narrowing
+
 * Expanded domain research documentation.
+
 * Created sample report collection strategy.
 
 ### Notes
@@ -79,5 +83,57 @@
 * AI-based report classification
 * CT/MRI/Ultrasound support
 
-```
-```
+---
+
+## June 9, 2026
+
+### Completed
+
+* Implemented Medical Glossary Generation.
+
+* Implemented Doctor Discussion Questions.
+
+* Improved patient-friendly explanation prompts.
+
+* Added separation between:
+
+  * Important Findings in Your Report
+  * Other Medical Terms Mentioned
+
+* Improved output formatting using Markdown structure.
+
+* Tested the application using sample Chest X-Ray reports.
+
+### Key Decisions
+
+* Educational medical terms should be separated from actual findings.
+* Patients should be able to learn terminology even when findings are absent from their study.
+* Doctor discussion questions should focus on understanding findings rather than treatment recommendations.
+* Medical terminology should be simplified while preserving the original report meaning.
+
+### Current MVP Features
+
+* PDF Upload
+* Optional X-Ray Image Upload
+* PDF Text Extraction
+* Report Classification
+* Patient-Friendly Explanation
+* Medical Glossary Generation
+* Doctor Discussion Questions
+
+### Future Work
+
+* Medical Finding Extraction
+* Analysis History Tracking
+* Image-to-Report Contextual Analysis
+* AI-Based Report Classification
+* CT Report Support
+* MRI Report Support
+* Ultrasound Report Support
+* Multilingual Support
+
+### Notes
+
+* Public datasets containing both X-Ray images and corresponding radiology reports are difficult to obtain.
+* The current MVP primarily focuses on report interpretation while allowing optional image uploads.
+* Prompt engineering significantly improved output quality and consistency.
