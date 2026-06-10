@@ -2,14 +2,11 @@
 
 ## Overview
 
-The AI-Assisted Radiology Explainer is designed to help patients better understand Chest and Bone X-Ray studies using both the radiology report and the associated X-Ray image.
+The AI-Assisted Radiology Explainer is designed to help patients better understand Chest and Bone X-Ray studies using radiology reports and optional X-Ray image uploads.
 
-The system combines report interpretation, image context, medical glossary generation, and doctor discussion questions to improve patient understanding after receiving imaging results.
+The system converts complex radiology terminology into patient-friendly explanations while generating medical glossary definitions, doctor discussion questions, and structured finding extraction.
 
-Version 1 focuses on Chest and Bone X-Ray studies and does not perform independent medical diagnosis. The radiology report remains the primary source of clinical interpretation.
-
-
-Version 1 focuses on report-based interpretation and does not perform direct X-Ray image analysis.
+Version 1 focuses on report-based interpretation and does not perform independent medical diagnosis or direct X-Ray image analysis.
 
 ---
 
@@ -17,8 +14,8 @@ Version 1 focuses on report-based interpretation and does not perform direct X-R
 
 User Uploads:
 
-* X-Ray Image
-* Radiology Report PDF
+* Radiology Report PDF (Required)
+* X-Ray Image (Optional)
 
 ↓
 
@@ -27,7 +24,6 @@ PDF Text Extraction (PyMuPDF)
 ↓
 
 Report Type Classification
-(Chest X-Ray or Bone X-Ray)
 
 ↓
 
@@ -35,33 +31,17 @@ Medical Finding Extraction
 
 ↓
 
-Google Gemini Vision
-(Image + Report Context)
+Google Gemini API
 
-↓
+├─ Patient-Friendly Explanation
 
-Patient-Friendly Explanation
+├─ Medical Glossary Generation
 
-↓
-
-Medical Glossary Generation
-
-↓
-
-Doctor Discussion Question Generation
-
-↓
-
-Image Context Explanation
-
-↓
-
-Store Results in PostgreSQL
+└─ Doctor Discussion Question Generation
 
 ↓
 
 Display Results in Streamlit Dashboard
-
 
 ---
 
@@ -72,25 +52,23 @@ Display Results in Streamlit Dashboard
 * Streamlit
 * File Upload Interface
 * Results Dashboard
-* Report History View
 
 ### Backend
 
-* FastAPI
-* API Endpoints
-* Business Logic
+* Python Application Logic
 * Validation and Error Handling
+* Report Classification
+* Finding Extraction
 
 ### AI Layer
 
-* Google Gemini Vision API
+* Google Gemini API
 * Report Interpretation
-* Image Context Understanding
-* Explanation Generation
-* Glossary Generation
-* Question Generation
+* Patient-Friendly Explanation Generation
+* Medical Glossary Generation
+* Doctor Discussion Question Generation
 
-### Database
+### Database (Future)
 
 * PostgreSQL
 * Report Storage
@@ -104,8 +82,11 @@ Display Results in Streamlit Dashboard
 
 ### Image Processing
 
-* X-Ray Image Upload
+* Optional X-Ray Image Upload
 * Image Validation
+
+Future:
+
 * Image Context Extraction
 * Image and Report Correlation
 
@@ -113,13 +94,47 @@ Display Results in Streamlit Dashboard
 
 ## Version 1 Supported Reports
 
-* Chest X-Ray Reports
-* Bone X-Ray Reports
+### Chest X-Ray Reports
+
+Supported Findings:
+
+* Cardiomegaly
+* Pleural Effusion
+* Pneumonia
+* Pneumothorax
+
+### Bone X-Ray Reports
+
+Supported Findings:
+
+* Fracture
+* Osteoarthritis
+* Dislocation
+* Joint Space Narrowing
+
+---
+
+## Current MVP Features
+
+* PDF Report Upload
+* Optional X-Ray Image Upload
+* PDF Text Extraction
+* Report Type Classification
+* Medical Finding Extraction
+* Patient-Friendly Explanation Generation
+* Medical Glossary Generation
+* Doctor Discussion Question Generation
+* Unsupported Report Detection
 
 ---
 
 ## Future Expansion
 
+* Finding Severity Detection
+* Analysis History Tracking
+* PostgreSQL Integration
+* Image-to-Report Contextual Analysis
+* AI-Based Report Classification
 * CT Report Support
 * MRI Report Support
 * Ultrasound Report Support
