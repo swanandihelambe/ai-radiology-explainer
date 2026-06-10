@@ -66,23 +66,6 @@
 * Rule-based classification is used for the MVP.
 * AI-based classification may be added in a future version.
 
-### Current MVP Features
-
-* PDF Upload
-* Text Extraction
-* Report Classification
-* AI Explanation Generation
-* Optional Image Upload
-
-### Future Work
-
-* Medical glossary generation
-* Doctor discussion questions
-* Analysis history
-* Image-to-report contextual analysis
-* AI-based report classification
-* CT/MRI/Ultrasound support
-
 ---
 
 ## June 9, 2026
@@ -111,29 +94,46 @@
 * Doctor discussion questions should focus on understanding findings rather than treatment recommendations.
 * Medical terminology should be simplified while preserving the original report meaning.
 
-### Current MVP Features
-
-* PDF Upload
-* Optional X-Ray Image Upload
-* PDF Text Extraction
-* Report Classification
-* Patient-Friendly Explanation
-* Medical Glossary Generation
-* Doctor Discussion Questions
-
-### Future Work
-
-* Medical Finding Extraction
-* Analysis History Tracking
-* Image-to-Report Contextual Analysis
-* AI-Based Report Classification
-* CT Report Support
-* MRI Report Support
-* Ultrasound Report Support
-* Multilingual Support
 
 ### Notes
 
 * Public datasets containing both X-Ray images and corresponding radiology reports are difficult to obtain.
 * The current MVP primarily focuses on report interpretation while allowing optional image uploads.
 * Prompt engineering significantly improved output quality and consistency.
+
+---
+
+## June 10, 2026
+
+### Completed
+
+* Implemented Medical Finding Extraction V1.
+* Added support for detecting:
+  * Cardiomegaly
+  * Pleural Effusion
+  * Pneumonia
+  * Pneumothorax
+  * Fracture
+  * Osteoarthritis
+  * Dislocation
+  * Joint Space Narrowing
+* Added a Detected Findings section to the user interface.
+* Restricted finding extraction to supported Chest and Bone X-Ray reports.
+* Implemented basic negation handling for absent findings.
+* Tested finding extraction using Chest X-Ray and non-radiology reports.
+
+### Key Decisions
+
+* Finding extraction uses rule-based keyword matching for the MVP.
+* Finding extraction is performed only for supported radiology reports.
+* Basic negation handling was introduced to reduce false-positive findings.
+* Non-radiology reports are excluded from finding extraction.
+
+### Notes
+
+* Simple keyword matching can produce false-positive findings.
+* Basic negation handling improved extraction accuracy for phrases such as:
+  * No pneumothorax
+  * No pleural effusion
+* Future versions may use NLP-based extraction and severity detection.
+* Testing with non-radiology reports helped identify edge cases and improve extraction reliability.
