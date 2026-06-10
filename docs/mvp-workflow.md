@@ -120,21 +120,31 @@ Output:
 
 ---
 
-### Step 6: Generate Medical Glossary (Future)
+### Step 6: Generate Medical Glossary
 
-Planned for a future MVP iteration.
+Google Gemini identifies important medical terms and generates patient-friendly definitions.
 
----
+Output:
 
-### Step 7: Generate Doctor Discussion Questions (Future)
-
-Planned for a future MVP iteration.
+* Medical glossary
 
 ---
 
-### Step 8: Save Analysis
+### Step 7: Generate Doctor Discussion Questions
 
-The system stores:
+Google Gemini generates educational questions that patients may discuss with their healthcare provider.
+
+Output:
+
+* Doctor discussion questions
+
+---
+
+### Step 8: Save Analysis (Future)
+
+Planned for a future MVP iteration.
+
+Future Storage:
 
 * X-Ray image
 * Report text
@@ -143,10 +153,6 @@ The system stores:
 * Glossary
 * Questions
 * Image context
-
-Output:
-
-* Analysis history
 
 ---
 
@@ -171,6 +177,7 @@ It combines:
 
 * X-Ray image understanding
 * Radiology report interpretation
+* Medical finding extraction
 * Medical glossary generation
 * Doctor discussion questions
 * Image-to-report correlation
@@ -188,5 +195,8 @@ The MVP will be considered successful if:
 2. A user can optionally upload an X-Ray image.
 3. The system can extract report text from the uploaded PDF.
 4. The system can classify the report type.
-5. The system can generate patient-friendly explanations.
-6. The system can reject unsupported report types.
+5. The system can extract supported findings from reports.
+6. The system can generate patient-friendly explanations.
+7. The system can generate a medical glossary.
+8. The system can generate doctor discussion questions.
+9. The system can reject unsupported report types.
