@@ -57,8 +57,7 @@ Patients can understand report findings without needing advanced medical knowled
 
 ### Problem
 
-Reports often mention conditions that are explicitly absent.
-
+Radiology reports often mention important medical conditions even when they are explicitly absent from the patient's study.
 Example:
 
 * No pneumothorax
@@ -121,6 +120,105 @@ Reduced API usage and improved performance.
 
 ---
 
+## Challenge 7: False Positive Finding Detection
+
+### Problem
+
+Initial finding extraction relied on simple keyword matching.
+
+This caused findings to be detected even when they were explicitly stated as absent.
+
+Examples:
+
+* No pneumothorax
+* No pleural effusion
+
+### Decision
+
+Implemented basic negation handling by examining text immediately preceding supported finding keywords.
+
+### Outcome
+
+Reduced false-positive findings and improved extraction accuracy for supported Chest and Bone X-Ray reports.
+
+---
+
+## Challenge 8: Non-Radiology Report Processing
+
+### Problem
+
+Keywords such as "pneumonia" appeared inside laboratory and respiratory panel reports.
+
+This caused unsupported reports to incorrectly trigger finding detection.
+
+### Example
+
+A respiratory panel report mentioned pneumonia in educational text even though it was not an imaging finding.
+
+### Decision
+
+Restricted finding extraction to supported radiology report categories only.
+
+### Outcome
+
+Prevented false findings from unrelated medical report types.
+
+---
+
+## Challenge 9: Keyword Detection vs True Finding Extraction
+
+### Problem
+
+Simple keyword matching does not fully understand report context.
+
+A medical term may be:
+
+* Present
+* Absent
+* Historical
+* Mentioned for educational purposes
+
+### Decision
+
+Use rule-based keyword extraction with basic negation handling for the MVP.
+
+### Future Improvement
+
+Investigate NLP-based finding extraction and contextual understanding for improved accuracy.
+
+### Outcome
+
+Delivered a lightweight and explainable extraction system suitable for the MVP.
+
+---
+
+## Challenge 10: Public Dataset Quality and Availability
+
+### Problem
+
+Many publicly available medical datasets either:
+
+* Contain images without reports
+* Contain reports without images
+* Have incomplete metadata
+* Require additional preprocessing before use
+
+This made realistic end-to-end testing difficult during MVP development.
+
+### Decision
+
+Use a combination of publicly available reports, sample reports, and controlled test cases during development.
+
+### Future Improvement
+
+Build a larger curated testing dataset containing both X-Ray images and corresponding radiology reports.
+
+### Outcome
+
+Enabled MVP validation despite limited availability of paired image-report datasets.
+
+
+---
 ## Known Limitations
 
 * Version 1 does not perform independent diagnosis.
