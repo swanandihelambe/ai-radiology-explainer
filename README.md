@@ -65,12 +65,13 @@ Radiology reports often contain complex medical terminology that can be difficul
 * AI-generated patient-friendly explanations
 * Medical glossary generation
 * Doctor discussion questions
+* Medical finding extraction
 
 ### In Progress
 
 * Sample report collection
 * Medical terminology mapping
-* Medical finding extraction
+* Finding severity detection
 * Image-to-report contextual analysis
 
 ### Upcoming
@@ -113,10 +114,11 @@ Currently in MVP development.
 * AI-generated patient-friendly explanations
 * Medical glossary generation
 * Doctor discussion questions
+* Medical finding extraction
 
 ### In Progress
 
-* Medical finding extraction
+* Finding severity detection
 * Image-to-report contextual analysis
 * Analysis history tracking
 
