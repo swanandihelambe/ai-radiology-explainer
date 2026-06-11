@@ -137,3 +137,44 @@
   * No pleural effusion
 * Future versions may use NLP-based extraction and severity detection.
 * Testing with non-radiology reports helped identify edge cases and improve extraction reliability.
+
+---
+
+## June 11, 2026
+
+### Completed
+
+* Implemented Finding Severity Detection V1.
+
+* Added support for severity indicators:
+
+  * Minimal
+  * Small
+  * Mild
+  * Moderate
+  * Large
+  * Severe
+  * Displaced
+  * Non-Displaced
+
+* Enhanced finding extraction to display severity information when available.
+
+* Implemented PDF text normalization for malformed medical terms caused by PDF extraction artifacts.
+
+* Fixed Pleural Effusion detection issues caused by Unicode and font-encoding inconsistencies.
+
+* Tested finding extraction and severity detection using real-world Chest X-Ray reports.
+
+### Key Decisions
+
+* Severity detection remains rule-based for the MVP.
+* PDF text normalization is performed before report classification and finding extraction.
+* Findings should include severity information whenever explicitly mentioned in the report.
+* Text preprocessing is required to improve reliability when working with real-world radiology PDFs.
+
+### Notes
+
+* Real-world PDF extraction may introduce Unicode and font-encoding artifacts.
+* Text normalization significantly improved finding extraction accuracy.
+* Severity detection improved the clinical usefulness of extracted findings without requiring additional AI API calls.
+* Additional report variations and edge cases will continue to be tested as the dataset grows.
