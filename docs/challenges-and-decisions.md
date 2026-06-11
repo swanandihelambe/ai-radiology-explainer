@@ -217,6 +217,38 @@ Build a larger curated testing dataset containing both X-Ray images and correspo
 
 Enabled MVP validation despite limited availability of paired image-report datasets.
 
+---
+
+## June 11, 2026
+
+### Completed
+
+* Implemented Finding Severity Detection V1.
+* Added support for severity indicators:
+  * Minimal
+  * Small
+  * Mild
+  * Moderate
+  * Large
+  * Severe
+  * Displaced
+  * Non-Displaced
+
+* Improved finding extraction accuracy.
+* Implemented PDF text normalization for malformed medical terms.
+* Fixed Pleural Effusion detection issues caused by PDF extraction artifacts.
+* Tested extraction using real-world Chest X-Ray reports.
+
+### Key Decisions
+
+* Severity detection remains rule-based for the MVP.
+* PDF text is normalized before classification and finding extraction.
+* Findings are displayed with severity when available.
+
+### Notes
+
+* Real-world medical PDFs may contain Unicode and character encoding artifacts.
+* Text normalization significantly improved extraction reliability.
 
 ---
 ## Known Limitations
