@@ -218,37 +218,29 @@ Build a larger curated testing dataset containing both X-Ray images and correspo
 Enabled MVP validation despite limited availability of paired image-report datasets.
 
 ---
+## Challenge 10: PDF Text Normalization
 
-## June 11, 2026
+### Problem
 
-### Completed
+Some radiology PDFs contained Unicode and font-encoding artifacts during text extraction.
 
-* Implemented Finding Severity Detection V1.
-* Added support for severity indicators:
-  * Minimal
-  * Small
-  * Mild
-  * Moderate
-  * Large
-  * Severe
-  * Displaced
-  * Non-Displaced
+Example:
 
-* Improved finding extraction accuracy.
-* Implemented PDF text normalization for malformed medical terms.
-* Fixed Pleural Effusion detection issues caused by PDF extraction artifacts.
-* Tested extraction using real-world Chest X-Ray reports.
+* Pleural eưusion
 
-### Key Decisions
+instead of
 
-* Severity detection remains rule-based for the MVP.
-* PDF text is normalized before classification and finding extraction.
-* Findings are displayed with severity when available.
+* Pleural Effusion
 
-### Notes
+This caused valid findings to be missed during keyword matching.
 
-* Real-world medical PDFs may contain Unicode and character encoding artifacts.
-* Text normalization significantly improved extraction reliability.
+### Decision
+
+Implemented a text normalization layer before report classification and finding extraction.
+
+### Outcome
+
+Improved finding extraction reliability across real-world radiology PDFs.
 
 ---
 ## Known Limitations
