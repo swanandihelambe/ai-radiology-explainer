@@ -178,3 +178,28 @@
 * Text normalization significantly improved finding extraction accuracy.
 * Severity detection improved the clinical usefulness of extracted findings without requiring additional AI API calls.
 * Additional report variations and edge cases will continue to be tested as the dataset grows.
+
+---
+
+
+## June 13, 2026
+
+### Completed
+
+* Designed Analysis History feature.
+* Defined MVP privacy strategy.
+* Designed database schema for analysis storage.
+* Created AnalysisHistoryDesign.md.
+* Created DatabaseSchema.md.
+
+### Key Decisions
+
+* Generated analysis results will be stored.
+* Patient-identifiable information will not be stored.
+* Raw reports and X-Ray images will not be stored in the MVP.
+* JSON will be used for structured output fields.
+
+### Notes
+
+* Privacy considerations were incorporated into the MVP design.
+* Database design was finalized before PostgreSQL implementation.
